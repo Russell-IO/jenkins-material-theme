@@ -22,6 +22,7 @@ git checkout gh-pages
 rm -rf dist
 mv $FOLDER ./dist
 
+sed -i 's?#header?#page-header?g' dist/*css
 git add dist/
 git commit -m "version $VERSION"
 git push origin gh-pages
